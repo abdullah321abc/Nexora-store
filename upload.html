@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Upload a Game | Nexora Store</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+<script src="../js/supabaseClient.js" defer></script>
+<script src="../js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-content container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">🎮</span>
+                <span class="logo-text">
+                    <strong>NEXORA STORE</strong>
+                    <small>The Future of Apps.</small>
+                </span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container main-content">
+
+        <section class="section-block">
+
+            <div class="section-heading">
+                <span class="eyebrow">DEVELOPER ZONE</span>
+                <h1>Upload Your Game 🚀</h1>
+                <p class="section-description">
+                    Share your creation with the Nexora Store community.
+                    Every submission must be reviewed before publishing.
+                </p>
+            </div>
+
+            <div class="profile-card upload-card">
+
+                <div class="profile-avatar">📤</div>
+
+                <form id="uploadForm">
+
+                    <!-- Game Name -->
+                    <div class="form-group">
+                        <label for="gameName">Game Name</label>
+                        <input
+                            type="text"
+                            id="gameName"
+                            name="gameName"
+                            placeholder="e.g. Paper Minecraft 2D"
+                            maxlength="60"
+                            required
+                        >
+                    </div>
+
+                    <!-- Developer -->
+                    <div class="form-group">
+                        <label for="developerName">Developer Name</label>
+                        <input
+                            type="text"
+                            id="developerName"
+                            name="developerName"
+                            placeholder="Your developer name"
+                            maxlength="40"
+                            required
+                        >
+                    </div>
+
+                    <!-- Description -->
+                    <div class="form-group">
+                        <label for="gameDescription">Game Description</label>
+                        <textarea
+                            id="gameDescription"
+                            name="gameDescription"
+                            placeholder="Describe your game, its features, and how to play..."
+                            rows="5"
+                            maxlength="1500"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <!-- Category -->
+                    <div class="form-group">
+                        <label for="gameCategory">Category</label>
+                        <select id="gameCategory" name="category" required>
+                            <option value="">Choose a category</option>
+                            <option value="adventure">Adventure</option>
+                            <option value="action">Action</option>
+                            <option value="simulation">Simulation</option>
+                            <option value="puzzle">Puzzle</option>
+                            <option value="racing">Racing</option>
+                            <option value="strategy">Strategy</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Platform -->
+                    <div class="form-group">
+                        <label for="gamePlatform">Platform</label>
+                        <select id="gamePlatform" name="platform" required>
+                            <option value="">Choose a platform</option>
+                            <option value="online-android">
+                                Online Android Game
+                            </option>
+                            <option value="online-pc">
+                                Online PC Game
+                            </option>
+                            <option value="android">
+                                Android Download
+                            </option>
+                            <option value="pc">
+                                PC Download
+                            </option>
+                        </select>
+                    </div>
+
+                    <!-- Game Type -->
+                    <div class="form-group">
+                        <label for="gameType">How does your game work?</label>
+                        <select id="gameType" name="gameType" required>
+                            <option value="">Choose game type</option>
+                            <option value="browser">
+                                Play in Browser (HTML game)
+                            </option>
+                            <option value="download">
+                                Downloadable Game
+                            </option>
+                        </select>
+                    </div>
+
+                    <!-- Cover Image -->
+                    <div class="form-group">
+                        <label for="gameCover">Game Cover Image</label>
+                        <input
+                            type="file"
+                            id="gameCover"
+                            name="gameCover"
+                            accept="image/png,image/jpeg,image/webp"
+                            required
+                        >
+                        <small>PNG, JPG, or WebP image.</small>
+                    </div>
+
+                    <!-- Game File -->
+                    <div class="form-group">
+                        <label for="gameFile">Game File</label>
+                        <input
+                            type="file"
+                            id="gameFile"
+                            name="gameFile"
+                            accept=".html,.htm,.zip,.apk,.exe"
+                            required
+                        >
+                        <small>
+                            Select your game file. Allowed formats depend on
+                            the platform and store review rules.
+                        </small>
+                    </div>
+
+                    <!-- Ownership -->
+                    <label class="terms-label">
+                        <input
+                            type="checkbox"
+                            id="ownershipConfirm"
+                            name="ownershipConfirm"
+                            required
+                        >
+                        I created this game or have permission to distribute it.
+                    </label>
+
+                    <label class="terms-label">
+                        <input
+                            type="checkbox"
+                            id="safetyConfirm"
+                            name="safetyConfirm"
+                            required
+                        >
+                        I understand my submission must be reviewed before
+                        publication.
+                    </label>
+
+                    <button type="submit" class="primary-button">
+                        Submit for Review 🚀
+                    </button>
+
+                    <p
+                        id="uploadMessage"
+                        class="form-message"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+
+                </form>
+
+            </div>
+        </section>
+
+        <!-- Submission Rules -->
+        <section class="section-block">
+            <div class="section-heading">
+                <h2>Before You Upload</h2>
+                <p class="section-description">
+                    Help keep Nexora Store safe and enjoyable.
+                </p>
+            </div>
+
+            <div class="profile-card">
+                <h3>✅ Use Your Own Work</h3>
+                <p>
+                    Upload games you created or are authorized to distribute.
+                </p>
+
+                <h3>🛡️ Keep Games Safe</h3>
+                <p>
+                    Submissions need checks for malicious code and unsafe files
+                    before they can be published.
+                </p>
+
+                <h3>⏳ Wait for Approval</h3>
+                <p>
+                    A submitted game should remain unpublished until a reviewer
+                    approves it.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="../index.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+            <span>Home</span>
+        </a>
+
+        <a href="search.html" class="nav-item">
+            <span class="nav-icon">🔍</span>
+            <span>Search</span>
+        </a>
+
+        <a href="upload.html" class="nav-item">
+            <span class="nav-icon">📤</span>
+            <span>Upload</span>
+        </a>
+
+        <a href="profile.html" class="nav-item">
+            <span class="nav-icon">👤</span>
+            <span>Profile</span>
+        </a>
+    </nav>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>© <span id="currentYear"></span> Nexora Store.</p>
+    </footer>
+
+</body>
+</html>

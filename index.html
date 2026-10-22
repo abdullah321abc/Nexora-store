@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nexora Store | The Future of Apps</title>
+    <meta name="description" content="Discover Android games, PC games, and free online browser games on Nexora Store.">
+
+    <!-- Website icon -->
+    <meta name="theme-color" content="#101522">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-content">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🎮</span>
+                <span class="logo-text">
+                    <strong>NEXORA STORE</strong>
+                    <small>The Future of Apps.</small>
+                </span>
+            </a>
+
+            <button class="icon-button notification-button"
+                    type="button"
+                    aria-label="Notifications">
+                🔔
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="container main-content">
+
+        <!-- SEARCH -->
+        <section class="search-section">
+            <form class="search-bar" id="searchForm" role="search">
+
+                <span class="search-icon" aria-hidden="true">🔎</span>
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search games and apps..."
+                    aria-label="Search games and apps"
+                    autocomplete="off"
+                >
+
+                <button type="submit" class="search-button">
+                    Search
+                </button>
+
+            </form>
+        </section>
+
+
+        <!-- WELCOME -->
+        <section class="welcome-section">
+            <p class="eyebrow">YOUR GAMING WORLD</p>
+
+            <h1>Discover. Play. <span>Explore.</span></h1>
+
+            <p class="section-description">
+                Your next favourite game is waiting for you.
+            </p>
+        </section>
+
+
+        <!-- GAME CATEGORIES -->
+        <section class="section-block" id="categories">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Explore Games</h2>
+                    <p>Choose your platform</p>
+                </div>
+            </div>
+
+            <div class="category-grid">
+
+                <a href="pages/games.html?platform=android"
+                   class="category-card android-card"
+                   data-category="android">
+                    <span class="category-icon">📱</span>
+                    <span class="category-info">
+                        <strong>Android Games</strong>
+                        <small>Download and play</small>
+                    </span>
+                    <span class="category-arrow">→</span>
+                </a>
+
+                <a href="pages/games.html?platform=pc"
+                   class="category-card pc-card"
+                   data-category="pc">
+                    <span class="category-icon">🖥️</span>
+                    <span class="category-info">
+                        <strong>PC Games</strong>
+                        <small>Games for your computer</small>
+                    </span>
+                    <span class="category-arrow">→</span>
+                </a>
+
+                <a href="pages/games.html?platform=online-pc"
+                   class="category-card online-pc-card"
+                   data-category="online-pc">
+                    <span class="category-icon">🌐</span>
+                    <span class="category-info">
+                        <strong>Online PC Games</strong>
+                        <small>Play in your browser</small>
+                    </span>
+                    <span class="category-arrow">→</span>
+                </a>
+
+                <a href="pages/games.html?platform=online-android"
+                   class="category-card online-android-card"
+                   data-category="online-android">
+                    <span class="category-icon">🎯</span>
+                    <span class="category-info">
+                        <strong>Online Android Games</strong>
+                        <small>Play without installing</small>
+                    </span>
+                    <span class="category-arrow">→</span>
+                </a>
+
+            </div>
+        </section>
+
+
+        <!-- FEATURED GAME -->
+        <section class="section-block" id="featured">
+
+            <div class="section-heading">
+                <div>
+                    <h2>⭐ Featured Game</h2>
+                    <p>Check out our featured pick</p>
+                </div>
+            </div>
+
+            <article class="featured-game game-item"
+                     data-title="Paper Minecraft 2D"
+                     data-platform="online-pc online-android browser">
+
+                <div class="featured-art">
+                    <div class="featured-art-overlay">
+                        <span class="game-badge">BROWSER GAME</span>
+                        <span class="featured-emoji">🌳⛏️🟩</span>
+                    </div>
+                </div>
+
+                <div class="featured-info">
+                    <div class="featured-text">
+                        <h3>Paper Minecraft 2D</h3>
+                        <p>
+                            Explore, build, and survive in a
+                            block-style 2D world.
+                        </p>
+                        <span class="game-platform">
+                            🌐 Online · Adventure
+                        </span>
+                    </div>
+
+                    <a href="pages/game-details.html?game=paper-minecraft-2d"
+                       class="primary-button">
+                        ▶ Play Now
+                    </a>
+                </div>
+
+            </article>
+        </section>
+
+
+        <!-- POPULAR GAMES -->
+        <section class="section-block" id="popular">
+
+            <div class="section-heading">
+                <div>
+                    <h2>🔥 Popular Games</h2>
+                    <p>Find your next adventure</p>
+                </div>
+
+                <a href="pages/games.html" class="text-link">
+                    View all →
+                </a>
+            </div>
+
+            <div class="games-grid">
+
+                <article class="game-card game-item"
+                         data-title="Pixel Adventure"
+                         data-platform="online-pc online-android">
+
+                    <a href="pages/game-details.html?game=pixel-adventure"
+                       class="game-image pixel-art"
+                       aria-label="View Pixel Adventure">
+                        <span>🧙‍♂️🌲</span>
+                        <span class="image-label">ONLINE</span>
+                    </a>
+
+                    <div class="game-card-info">
+                        <h3>Pixel Adventure</h3>
+                        <p>Platform · Browser</p>
+                        <a href="pages/game-details.html?game=pixel-adventure"
+                           class="small-button">View Game</a>
+                    </div>
+                </article>
+
+
+                <article class="game-card game-item"
+                         data-title="Block World"
+                         data-platform="android pc">
+
+                    <a href="pages/game-details.html?game=block-world"
+                       class="game-image block-art"
+                       aria-label="View Block World">
+                        <span>🟩⛏️🌲</span>
+                        <span class="image-label">ADVENTURE</span>
+                    </a>
+
+                    <div class="game-card-info">
+                        <h3>Block World</h3>
+                        <p>Sandbox · Adventure</p>
+                        <a href="pages/game-details.html?game=block-world"
+                           class="small-button">View Game</a>
+                    </div>
+                </article>
+
+
+                <article class="game-card game-item"
+                         data-title="Space Explorer"
+                         data-platform="pc online-pc">
+
+                    <a href="pages/game-details.html?game=space-explorer"
+                       class="game-image space-art"
+                       aria-label="View Space Explorer">
+                        <span>🚀🪐</span>
+                        <span class="image-label">SPACE</span>
+                    </a>
+
+                    <div class="game-card-info">
+                        <h3>Space Explorer</h3>
+                        <p>Space · Exploration</p>
+                        <a href="pages/game-details.html?game=space-explorer"
+                           class="small-button">View Game</a>
+                    </div>
+                </article>
+
+            </div>
+
+            <p class="empty-message" id="emptyMessage" hidden>
+                No matching games found. Try another search.
+            </p>
+
+        </section>
+
+
+        <!-- DEVELOPER SECTION -->
+        <section class="developer-banner">
+
+            <div class="developer-icon">🚀</div>
+
+            <div class="developer-text">
+                <h2>Made a game?</h2>
+                <p>
+                    Share your creation with the Nexora community.
+                    Submit your game for review.
+                </p>
+            </div>
+
+            <a href="pages/upload.html" class="secondary-button">
+                Upload Game
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- FIXED BOTTOM NAVIGATION -->
+    <nav class="bottom-nav" aria-label="Main navigation">
+
+        <a href="index.html" class="nav-item active"
+           aria-current="page">
+            <span class="nav-icon">⌂</span>
+            <span>Home</span>
+        </a>
+
+        <a href="pages/search.html" class="nav-item">
+            <span class="nav-icon">⌕</span>
+            <span>Search</span>
+        </a>
+
+        <a href="pages/upload.html" class="nav-item">
+            <span class="nav-icon">＋</span>
+            <span>Upload</span>
+        </a>
+
+        <a href="pages/profile.html" class="nav-item">
+            <span class="nav-icon">♙</span>
+            <span>Profile</span>
+        </a>
+
+    </nav>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>© <span id="currentYear">2026</span> Nexora Store</p>
+        <p>The Future of Apps. 🎮</p>
+    </footer>
+```html
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabaseClient.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+
+</body>
+</html>
+

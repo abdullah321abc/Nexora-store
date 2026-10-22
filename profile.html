@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile | Nexora Store</title>
+    <meta name="description" content="Manage your Nexora Store profile, saved games, and uploads.">
+    <meta name="theme-color" content="#101522">
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Shared JavaScript -->
+    <script src="../js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-content">
+
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">🎮</span>
+                <span class="logo-text">
+                    <strong>NEXORA STORE</strong>
+                    <small>The Future of Apps.</small>
+                </span>
+            </a>
+
+            <a href="../index.html"
+               class="icon-button"
+               aria-label="Back to home">
+                🏠
+            </a>
+
+        </div>
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="container main-content">
+
+        <!-- PAGE INTRO -->
+        <section class="welcome-section">
+            <p class="eyebrow">YOUR GAMING IDENTITY</p>
+            <h1>My <span>Profile.</span></h1>
+            <p class="section-description">
+                Manage your account and gaming collection.
+            </p>
+        </section>
+
+
+        <!-- PROFILE CARD -->
+        <section class="section-block">
+
+            <div class="profile-card">
+
+                <div class="profile-avatar" id="profileAvatar">
+                    🎮
+                </div>
+
+                <div class="profile-info">
+                    <span class="profile-status">
+                        NEXORA PLAYER
+                    </span>
+
+                    <h2 id="profileName">Guest Player</h2>
+
+                    <p id="profileEmail">
+                        Sign in to personalise your profile.
+                    </p>
+
+                    <span class="profile-badge">
+                        ⭐ Player
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACCOUNT ACTIONS -->
+        <section class="section-block">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Your Account</h2>
+                    <p>Access your Nexora account</p>
+                </div>
+            </div>
+
+            <div class="account-actions">
+
+                <a href="login.html" class="account-action">
+                    <span class="action-icon">🔐</span>
+
+                    <span class="action-text">
+                        <strong>Log In</strong>
+                        <small>Access your account</small>
+                    </span>
+
+                    <span class="action-arrow">→</span>
+                </a>
+
+                <a href="signup.html" class="account-action">
+                    <span class="action-icon">✨</span>
+
+                    <span class="action-text">
+                        <strong>Create Account</strong>
+                        <small>Join the Nexora community</small>
+                    </span>
+
+                    <span class="action-arrow">→</span>
+                </a>
+
+                <a href="upload.html" class="account-action">
+                    <span class="action-icon">🚀</span>
+
+                    <span class="action-text">
+                        <strong>My Game Uploads</strong>
+                        <small>Submit a game for review</small>
+                    </span>
+
+                    <span class="action-arrow">→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROFILE STATS -->
+        <section class="section-block">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Your Gaming Stats</h2>
+                    <p>Your collection at a glance</p>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <span class="stat-icon">❤️</span>
+                    <strong id="savedGamesCount">0</strong>
+                    <span>Saved Games</span>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-icon">🚀</span>
+                    <strong id="uploadedGamesCount">0</strong>
+                    <span>Uploads</span>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-icon">🎮</span>
+                    <strong id="playedGamesCount">0</strong>
+                    <span>Games Played</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SAVED GAMES -->
+        <section class="section-block">
+
+            <div class="section-heading">
+                <div>
+                    <h2>❤️ Saved Games</h2>
+                    <p>Games you want to play later</p>
+                </div>
+
+                <a href="games.html" class="text-link">
+                    Explore →
+                </a>
+            </div>
+
+            <div class="games-grid" id="savedGamesGrid">
+
+                <!-- Example saved game -->
+                <article class="game-card game-item"
+                         data-title="Paper Minecraft 2D"
+                         data-platform="online-pc online-android">
+
+                    <a href="game-details.html?game=paper-minecraft-2d"
+                       class="game-image block-art"
+                       aria-label="Paper Minecraft 2D details">
+                        <span>🌳⛏️🟩</span>
+                        <span class="image-label">BROWSER</span>
+                    </a>
+
+                    <div class="game-card-info">
+                        <h3>Paper Minecraft 2D</h3>
+                        <p>Sandbox · Adventure</p>
+
+                        <a href="game-details.html?game=paper-minecraft-2d"
+                           class="small-button">
+                            View Game
+                        </a>
+                    </div>
+
+                </article>
+
+            </div>
+
+            <p class="empty-message" id="noSavedGames" hidden>
+                You haven't saved any games yet.
+                Explore the store to find your favourites!
+            </p>
+
+        </section>
+
+
+        <!-- DEVELOPER SECTION -->
+        <section class="developer-banner">
+
+            <div class="developer-icon">🛠️</div>
+
+            <div class="developer-text">
+                <h2>Become a Creator</h2>
+
+                <p>
+                    Share your own games with other players
+                    by submitting them for review.
+                </p>
+            </div>
+
+            <a href="upload.html" class="secondary-button">
+                Upload Game
+            </a>
+
+        </section>
+
+
+        <!-- ACCOUNT SETTINGS -->
+        <section class="section-block">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Settings</h2>
+                    <p>More account options</p>
+                </div>
+            </div>
+
+            <div class="account-actions">
+
+                <button type="button"
+                        class="account-action account-action-button"
+                        id="editProfileButton">
+
+                    <span class="action-icon">✏️</span>
+
+                    <span class="action-text">
+                        <strong>Edit Profile</strong>
+                        <small>Personalise your player name</small>
+                    </span>
+
+                    <span class="action-arrow">→</span>
+
+                </button>
+
+                <a href="login.html" class="account-action">
+                    <span class="action-icon">🔑</span>
+
+                    <span class="action-text">
+                        <strong>Account Access</strong>
+                        <small>Log in or create an account</small>
+                    </span>
+
+                    <span class="action-arrow">→</span>
+                </a>
+
+            </div>
+
+            <p class="form-message" id="profileMessage"
+               role="status" aria-live="polite"></p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FIXED BOTTOM NAVIGATION -->
+    <nav class="bottom-nav" aria-label="Main navigation">
+
+        <a href="../index.html" class="nav-item">
+            <span class="nav-icon">⌂</span>
+            <span>Home</span>
+        </a>
+
+        <a href="search.html" class="nav-item">
+            <span class="nav-icon">⌕</span>
+            <span>Search</span>
+        </a>
+
+        <a href="upload.html" class="nav-item">
+            <span class="nav-icon">＋</span>
+            <span>Upload</span>
+        </a>
+
+        <a href="profile.html"
+           class="nav-item active"
+           aria-current="page">
+            <span class="nav-icon">♙</span>
+            <span>Profile</span>
+        </a>
+
+    </nav>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>© <span id="currentYear">2026</span> Nexora Store</p>
+        <p>The Future of Apps. 🎮</p>
+    </footer>
+
+</body>
+</html>
+

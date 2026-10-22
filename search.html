@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Search Games | Nexora Store</title>
+    <meta name="description" content="Search Android games, PC games, and online browser games on Nexora Store.">
+    <meta name="theme-color" content="#101522">
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Shared JavaScript -->
+    <script src="../js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-content">
+
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">🎮</span>
+                <span class="logo-text">
+                    <strong>NEXORA STORE</strong>
+                    <small>The Future of Apps.</small>
+                </span>
+            </a>
+
+            <a href="../index.html"
+               class="icon-button"
+               aria-label="Back to home">
+                🏠
+            </a>
+
+        </div>
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="container main-content">
+
+        <!-- PAGE INTRODUCTION -->
+        <section class="welcome-section">
+            <p class="eyebrow">FIND YOUR NEXT ADVENTURE</p>
+            <h1>Search <span>Games.</span></h1>
+            <p class="section-description">
+                Search for games by name or choose a platform.
+            </p>
+        </section>
+
+
+        <!-- SEARCH FORM -->
+        <section class="search-section">
+            <form class="search-bar" id="searchForm" role="search">
+
+                <span class="search-icon" aria-hidden="true">🔎</span>
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    name="q"
+                    placeholder="Try Minecraft or Space Explorer..."
+                    aria-label="Search games"
+                    autocomplete="off"
+                    autofocus
+                >
+
+                <button type="submit" class="search-button">
+                    Search
+                </button>
+
+            </form>
+        </section>
+
+
+        <!-- PLATFORM FILTERS -->
+        <section class="section-block">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Browse by Platform</h2>
+                    <p>Choose where you want to play</p>
+                </div>
+            </div>
+
+            <div class="filter-buttons" aria-label="Filter games">
+
+                <button type="button"
+                        class="filter-button active"
+                        data-filter="all"
+                        aria-pressed="true">
+                    All Games
+                </button>
+
+                <button type="button"
+                        class="filter-button"
+                        data-filter="android"
+                        aria-pressed="false">
+                    📱 Android
+                </button>
+
+                <button type="button"
+                        class="filter-button"
+                        data-filter="pc"
+                        aria-pressed="false">
+                    🖥️ PC
+                </button>
+
+                <button type="button"
+                        class="filter-button"
+                        data-filter="online-pc"
+                        aria-pressed="false">
+                    🌐 Online PC
+                </button>
+
+                <button type="button"
+                        class="filter-button"
+                        data-filter="online-android"
+                        aria-pressed="false">
+                    🎮 Online Android
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- SEARCH RESULTS -->
+        <section class="section-block" id="searchResults">
+
+            <div class="section-heading">
+                <div>
+                    <h2 id="resultsTitle">Discover Games</h2>
+                    <p id="resultsCount">Explore our sample game collection</p>
+                </div>
+            </div>
+
+            <div class="games-grid" id="gamesGrid">
+
+                <!-- GAME 1 -->
+                <article class="game-card game-item"
+                         data-title="Paper Minecraft 2D"
+                         data-platform="online-pc online-android">
+
+                    <a href="game-details.html?game=paper-minecraft-2d"
+                       class="game-image block-art"
+                       aria-label="View Paper Minecraft 2D">
+                        <span>🌳⛏️🟩</span>
+                        <span class="image-label">BROWSER</span>
+                    </a>
+
+                    <div class="game-card-info">
+                        <h3>Paper Minecraft 2D</h3>
+                        <p>Sandbox · Browser</p>
+                        <a href="game-details.html?game=paper-minecraft-2d"
+                           class="small-button">
+                            View Game
+                        </a>
+                    </div>
+                </article>
+
+
+                <!-- GAME 2 -->
+                <article class="game-card game-item"
+                         data-title="Pixel Adventure"
+                         data-platform="online-pc online-android">
+
+                    <a href="game-details.html?game=pixel-adventure"
+                       class="game-image pixel-art"
+                       aria-label="View Pixel Adventure">
+                        <span>🧙‍♂️🌲</span>
+                        <span class="image-label">ONLINE</span>
+                    </a>
+
+                    <div class="game-card-info">
+                        <h3>Pixel Adventure</h3>
+                        <p>Platform · Browser</p>
+                        <a href="game-details.html?game=pixel-adventure"
+                           class="small-button">
+                            View Game
+                        </a>
+                    </div>
+                </article>
+
+
+                <!-- GAME 3 -->
+                <article class="game-card game-item"
+                         data-title="Block World"
+                         data-platform="android pc">
+
+                    <a href="game-details.html?game=block-world"
+                       class="game-image block-art"
+                       aria-label="View Block World">
+                        <span>🟩🏡⛏️</span>
+                        <span class="image-label">ADVENTURE</span>
+                    </a>
+
+                    <div class="game-card-info">
+                        <h3>Block World</h3>
+                        <p>Sandbox · Adventure</p>
+                        <a href="game-details.html?game=block-world"
+                           class="small-button">
+                            View Game
+                        </a>
+                    </div>
+                </article>
+
+
+                <!-- GAME 4 -->
+                <article class="game-card game-item"
+                         data-title="Space Explorer"
+                         data-platform="pc online-pc">
+
+                    <a href="game-details.html?game=space-explorer"
+                       class="game-image space-art"
+                       aria-label="View Space Explorer">
+                        <span>🚀🪐</span>
+                        <span class="image-label">SPACE</span>
+                    </a>
+
+                    <div class="game-card-info">
+                        <h3>Space Explorer</h3>
+                        <p>Exploration · PC</p>
+                        <a href="game-details.html?game=space-explorer"
+                           class="small-button">
+                            View Game
+                        </a>
+                    </div>
+                </article>
+
+
+                <!-- GAME 5 -->
+                <article class="game-card game-item"
+                         data-title="Speed Racer"
+                         data-platform="android pc">
+
+                    <a href="game-details.html?game=speed-racer"
+                       class="game-image racing-art"
+                       aria-label="View Speed Racer">
+                        <span>🏎️💨</span>
+                        <span class="image-label">RACING</span>
+                    </a>
+
+                    <div class="game-card-info">
+                        <h3>Speed Racer</h3>
+                        <p>Racing · Action</p>
+                        <a href="game-details.html?game=speed-racer"
+                           class="small-button">
+                            View Game
+                        </a>
+                    </div>
+                </article>
+
+
+                <!-- GAME 6 -->
+                <article class="game-card game-item"
+                         data-title="Puzzle Master"
+                         data-platform="online-pc online-android">
+
+                    <a href="game-details.html?game=puzzle-master"
+                       class="game-image puzzle-art"
+                       aria-label="View Puzzle Master">
+                        <span>🧩💎</span>
+                        <span class="image-label">PUZZLE</span>
+                    </a>
+
+                    <div class="game-card-info">
+                        <h3>Puzzle Master</h3>
+                        <p>Puzzle · Browser</p>
+                        <a href="game-details.html?game=puzzle-master"
+                           class="small-button">
+                            View Game
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- NO RESULTS MESSAGE -->
+            <p class="empty-message" id="emptyMessage" hidden>
+                No games found. Try another name or platform.
+            </p>
+
+        </section>
+
+
+        <!-- DEVELOPER CALL TO ACTION -->
+        <section class="developer-banner">
+            <div class="developer-icon">🚀</div>
+
+            <div class="developer-text">
+                <h2>Can't find your game?</h2>
+                <p>
+                    Developers can submit games for review
+                    and publication on Nexora Store.
+                </p>
+            </div>
+
+            <a href="upload.html" class="secondary-button">
+                Upload Game
+            </a>
+        </section>
+
+    </main>
+
+
+    <!-- FIXED BOTTOM NAVIGATION -->
+    <nav class="bottom-nav" aria-label="Main navigation">
+
+        <a href="../index.html" class="nav-item">
+            <span class="nav-icon">⌂</span>
+            <span>Home</span>
+        </a>
+
+        <a href="search.html"
+           class="nav-item active"
+           aria-current="page">
+            <span class="nav-icon">⌕</span>
+            <span>Search</span>
+        </a>
+
+        <a href="upload.html" class="nav-item">
+            <span class="nav-icon">＋</span>
+            <span>Upload</span>
+        </a>
+
+        <a href="profile.html" class="nav-item">
+            <span class="nav-icon">♙</span>
+            <span>Profile</span>
+        </a>
+
+    </nav>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>© <span id="currentYear">2026</span> Nexora Store</p>
+        <p>The Future of Apps. 🎮</p>
+    </footer>
+
+</body>
+</html>
+
